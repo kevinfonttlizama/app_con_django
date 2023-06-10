@@ -54,7 +54,7 @@ ROOT_URLCONF = 'projectone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/kevin/OneDrive/Escritorio/app_con_django/projectone/projectone/templates"], #especificamos donde esta nuestra carpeta con nuestros templates html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
