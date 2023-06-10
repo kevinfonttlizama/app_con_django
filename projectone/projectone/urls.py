@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from projectone.views import saludo, despedida,obtenerFecha, calculaEdad #<-- importamos la vista
+from projectone.views import saludo, despedida,obtenerFecha, calculaEdad, compras #<-- importamos la vista
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('adios', despedida),
     path('fecha', obtenerFecha),
     path('edades/<int:edad>/<int:year>',calculaEdad),#colocamos el caracter de angulares para dar parametros dentros de las url en este caso estamos dando dos parametros int para calcular la edades futuras, usando la funcion calculaEdad que creamos en el archivo de views.py que nos devuelve un calculo en una edas futura.
+    path('compras',compras),
 
 
 ]

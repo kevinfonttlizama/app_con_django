@@ -68,6 +68,14 @@ def saludo(request):
 #debemos entregarle una url a python de esta vista para que cuando naveguemos por esa url podamos acceder a esta vista
 
 
+
+def compras(request):
+   
+   fecha_actual= datetime.datetime.now()
+   return render(request,'compras.html',{"obtenerFecha":fecha_actual})
+
+
+
 def despedida(request):
     return HttpResponse("Hasta luego amigos esto es una despedida de ejemplo")
 

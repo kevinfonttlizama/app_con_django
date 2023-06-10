@@ -6,7 +6,7 @@
     <title>Just a Index</title>
 </head>
 <body>
-    {% include "superior/nav_bar.html" %} 
+    {% extends 'base.html' %} 
     <h2>Hi i'm a test template</h2>
     <p>el nombre del programador es :  {{nombre_persona}} {{apellido_persona}}  </p>
     <p>la hora es : {{hora_actual.day}}/{{hora_actual.month}}/{{hora_actual.year}} </p>
