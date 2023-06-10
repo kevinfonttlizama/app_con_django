@@ -2,6 +2,7 @@ from django.http import HttpResponse
 import datetime
 from django.template import Template, Context
 from django.template.loader import get_template
+from django.shortcuts import render
 
 
 
@@ -53,7 +54,16 @@ def saludo(request):
     
      })
 
-    return HttpResponse(document)
+    return render(request, 'index.html',
+        #metodo render para renderizar el documento
+        #el contexto es un argumento opcional
+    context=({
+        "nombre_persona":p1.nombre,
+        "apellido_persona":p1.apellido,
+        "hora_actual":ahora,
+        "temas":temas_del_curso,
+    
+ }))
 
 #debemos entregarle una url a python de esta vista para que cuando naveguemos por esa url podamos acceder a esta vista
 
