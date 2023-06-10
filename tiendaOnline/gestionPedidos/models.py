@@ -22,6 +22,10 @@ class Clientes(models.Model):
     email=models.EmailField(max_length=50)
     telefono=models.CharField(max_length=15)
 
+#añandiendo cliente por consola python3 manage.py shell
+# >>> from gestionPedidos.models import Clientes
+# >>> cli=Clientes(nombre='kevin', direccion='mi casita', email='kevin.andresfontt@gmail.com', telefono='1234332223')
+# >>> cli.save()
 
 class Articulos(models.Model):
     nombre=models.CharField(max_length=30)
